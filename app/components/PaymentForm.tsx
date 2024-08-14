@@ -17,11 +17,11 @@ const PaymentForm = () => {
           <div className="absolute inset-0 flex justify-between p-4">
             <div className="flex items-center space-x-2 h-15">
               <Image src="/image/chip.png" alt="Chip" className="w-8" width={32} height={44} />
-              <Image src="/image/visa.png" alt="Visa" className="w-16" width={32} height={44}/>
+              {/* <Image src="/image/visa.png" alt="Visa" className="w-13" width={32} height={223}/> */}
             </div>
           </div>
           <div className="bg-gray-700 text-white p-4 rounded-lg">
-            <div className="text-xl font-bold mb-2">{cardNumber.padEnd(16, '•')}</div>
+            <div className="text-xl font-bold mb-2">{cardNumber.padEnd(16, '#')}</div>
             <div className="flex justify-between">
               <div>
                 <span className="text-sm">Card Holder</span>
@@ -64,9 +64,21 @@ const PaymentForm = () => {
                 className="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm text-black placeholder-gray-500 focus:ring-blue-500 focus:border-blue-500"
               >
                 <option value="Month" disabled>Month</option>
-                {[...Array(12)].map(i => (
+                <option value="Jan">Jan</option>
+                <option value="Feb">Feb</option>
+                <option value="March">March</option>
+                <option value="April">April</option>
+                <option value="May">May</option>
+                <option value="June">June</option>
+                <option value="July">July</option>
+                <option value="August">August</option>
+                <option value="Sep">Sep</option>
+                <option value="Oct">Oct</option>
+                <option value="Nov">Nov</option>
+                <option value="Dec">Dec</option>
+                {/* {[...Array(12)].map(i => (
                   <option key={i} value={String(i + 1).padStart(2, '0')}>{String(i + 1).padStart(2, '0')}</option>
-                ))}
+                ))} */}
               </select>
             </div>
             <div className="flex-1">
@@ -78,9 +90,15 @@ const PaymentForm = () => {
                 className="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm text-black placeholder-gray-500 focus:ring-blue-500 focus:border-blue-500"
               >
                 <option value="Year" disabled>Year</option>
-                {[...Array(10)].map(i => (
+                <option value="2025" >2025</option>
+                <option value="2026" >2026</option>
+                <option value="2027" >2027</option>
+                <option value="2028" >2028</option>
+                <option value="2029" >2029</option>
+                <option value="2030" >2030</option>
+                {/* {[...Array(10)].map(i => (
                   <option key={i} value={2024 + i}>{2024 + i}</option>
-                ))}
+                ))} */}
               </select>
             </div>
             <div className="flex-1">
