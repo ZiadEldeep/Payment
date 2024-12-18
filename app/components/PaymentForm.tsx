@@ -24,7 +24,7 @@ const PaymentForm = () => {
             <div className="text-xl font-bold mb-2">{cardNumber.padEnd(16, '#')}</div>
             <div className="flex justify-between">
               <div>
-                <span className="text-sm">Card Hoolder</span>
+                <span className="text-sm">Card Holder</span>
                 <div>{cardHolder || 'Full Name'}</div>
               </div>
               <div>
